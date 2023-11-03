@@ -1,0 +1,35 @@
+file asociatie.ser
+clear
+add L  1    51. 1990 Zorilor 10  A 2 12 3 
+add SF 190  50. 1990 Zorilor 9  A  2  12 "S.C. Tester Prim" 11223344 
+rem completati ... de pe linia urmatoare cu informatiile din text ref. la ap. cu id=1
+add L  1 51. 1990 Zorilor 10  A 2 12 3  
+rem completati ... de pe linia urmatoare cu informatiile din text ref. la ap. cu id=101
+add L  101 60. 2012 Zorilor 15 A 1 5 2
+list
+list 1
+list 10
+count L
+count SF
+count ?
+rem se elimina ap. cu id=190
+delete 190
+count SF
+delete 190
+count SF
+rem se face din nou add 190
+add SF 190  50. 1990 Zorilor 9  A  2  12 "S.C. Tester Prim" 11223344 
+add SF 190  50. 1990 Zorilor 9  A  2  12 "S.C. Tester Prim" 11223344 
+list 190
+newer 10
+newer  5
+newer  1
+street Zorilor
+street "Stefan cel Mare"
+rem se schimba mediul de stocare in asocNr1.ser
+file asocNr1.ser
+clear
+add L  1    51. 1990 Zorilor 10  A 2 12 3 
+add SF 190  50. 1990 Zorilor 9  A  2  12 "S.C. Tester Prim" 11223344 
+list
+stop
